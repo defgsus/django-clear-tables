@@ -11,6 +11,8 @@ to a fresh database, this data will clash with the `loaddata` command.
 
 Usage is as follows:
 
+Add `django_clear_tables` to `INSTALLED_APPS` in your django `settings.py`, then:
+
 ```bash
 # initially setup the database
 rm db.sqlite3  # or using mysql, pg, ...
