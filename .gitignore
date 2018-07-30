@@ -1,5 +1,6 @@
+# setuptools
 /dist/
-*.egg-info/
+/*.egg-info
 
 # Django App specifics
 /static/
