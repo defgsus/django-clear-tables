@@ -9,6 +9,12 @@ to a fresh database, this data will clash with the `loaddata` command.
 
 **Be careful** because it can also easily mess up your existing database. 
 
+Install it with:
+
+```bash
+pip install django-clear-tables
+```
+
 Usage is as follows:
 
 Add `django_clear_tables` to `INSTALLED_APPS` in your django `settings.py`, then:
