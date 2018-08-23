@@ -1,4 +1,5 @@
 # encoding=utf-8
+import sys
 
 from django.core.management.base import BaseCommand, CommandError
 from django.db.utils import OperationalError
@@ -16,18 +17,18 @@ def clear_django_tables():
     from django.contrib.auth.models import Permission
     try:
         Permission.objects.all().delete()
-        print("Permission cleared")
+        sys.stdout.write("Permission cleared\n")
     except OperationalError:
-        print("No Permission table present")
+        sys.stderr.write("No Permission table present\n")
         was_error = True
 
     from django.contrib.contenttypes.models import ContentType
     try:
         ContentType.objects.all().delete()
-        print("ContentType cleared")
+        sys.stdout.write("ContentType cleared\n")
     except OperationalError:
-        print("No ContentType table present")
+        sys.stderr.write("No ContentType table present\n")
         was_error = True
 
     if was_error:
-        print("Probably, you need to call ./manage.py migrate first")
+        sys.stderr.write("Probably, you need to call './manage.py migrate' first\n")
