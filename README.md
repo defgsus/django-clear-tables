@@ -1,4 +1,4 @@
-## django-clear-tables
+## django-clear-tables v0.1.2
 
 This is a simple django-app, registering a task called `django_clear_tables`.
 
